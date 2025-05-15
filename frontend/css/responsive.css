@@ -1,0 +1,159 @@
+/* Responsive Styles */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .search-container {
+    margin: 0 1rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .restaurant-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .restaurant-image-container {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cart-container {
+    order: -1;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .nav-buttons {
+    width: 100%;
+  }
+
+  .nav-buttons .add-restaurant-btn,
+  .nav-buttons .back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .restaurant-cards {
+    gap: 1rem;
+  }
+
+  .restaurant-card {
+    min-width: 200px;
+  }
+
+  .search-result-item {
+    flex-direction: column;
+  }
+
+  .search-result-image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .search-result-header {
+    flex-direction: column;
+  }
+
+  .search-result-favorite {
+    margin-top: 0.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .image-upload-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .food-item-content {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .food-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .order-history-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  .restaurant-card {
+    min-width: 160px;
+  }
+
+  .restaurant-card-image {
+    height: 120px;
+  }
+
+  .restaurant-card-content {
+    padding: 0.75rem;
+  }
+
+  .restaurant-card-content h3 {
+    font-size: 1rem;
+  }
+
+  .restaurant-card-content p {
+    font-size: 0.8rem;
+  }
+
+  .food-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+  }
+
+  .cart-item-price {
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}

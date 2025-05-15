@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - DeliNow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-utensils"></i>
+                <h1>DeliNow</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar restaurantes...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-buttons">
+                <button class="add-restaurant-btn" onclick="window.location.href='agregar_restaurante.html'">
+                    <i class="fas fa-plus"></i> Agregar Restaurante
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Añadir sección de filtros por categoría -->
+        <div class="filter-section">
+            <h3>Filtrar por categoría:</h3>
+            <div class="category-filters" id="search-category-filters">
+                <!-- Los filtros se generarán dinámicamente -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-results-container">
+            <h2 id="search-results-title">Resultados de Búsqueda</h2>
+            <div class="search-results" id="search-results-list">
+                <!-- Los resultados de búsqueda se generarán dinámicamente -->
+                <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+            </div>
+            <div id="no-results" class="hidden">
+                <p>No se encontraron resultados para tu búsqueda.</p>
+                <button class="secondary-btn" onclick="window.location.href='index.html'">Volver al Inicio</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DeliNow - Sistema de Pedidos</p>
+    </footer>
+
+    <script src="js/unified.js"></script>
+</body>
+</html>

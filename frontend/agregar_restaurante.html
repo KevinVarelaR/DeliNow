@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Restaurante - DeliNow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-utensils"></i>
+                <h1>DeliNow</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Agregar Nuevo Restaurante</h2>
+            <form id="restaurant-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="restaurant-image">Imagen del Restaurante (opcional, .jpg, máx. 5MB)</label>
+                    <div class="image-upload-container">
+                        <div class="image-preview" id="restaurant-image-preview">
+                            <i class="fas fa-image"></i>
+                            <span>Vista previa</span>
+                        </div>
+                        <input type="file" id="restaurant-image" accept=".jpg,.jpeg" class="file-input">
+                        <button type="button" class="upload-btn" id="upload-restaurant-image">Seleccionar Imagen</button>
+                    </div>
+                    <span class="error-message" id="restaurant-image-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="restaurant-name">Nombre del Restaurante *</label>
+                    <input type="text" id="restaurant-name" maxlength="100" required>
+                    <span class="error-message" id="restaurant-name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="restaurant-type">Tipo de Restaurante *</label>
+                    <select id="restaurant-type" required>
+                        <option value="" disabled selected>Seleccione un tipo</option>
+                        <option value="Comida Rápida">Comida Rápida</option>
+                        <option value="Comida Italiana">Comida Italiana</option>
+                        <option value="Comida Mexicana">Comida Mexicana</option>
+                        <option value="Comida China">Comida China</option>
+                        <option value="Comida Japonesa">Comida Japonesa</option>
+                        <option value="Comida Vegetariana">Comida Vegetariana</option>
+                        <option value="Mariscos">Mariscos</option>
+                        <option value="Parrilla">Parrilla</option>
+                        <option value="Cafetería">Cafetería</option>
+                    </select>
+                    <span class="error-message" id="restaurant-type-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Comidas</label>
+                    <div id="food-items-container">
+                        <!-- Aquí se agregarán dinámicamente los campos para las comidas -->
+                    </div>
+                    <button type="button" id="add-food-item" class="secondary-btn">
+                        <i class="fas fa-plus"></i> Agregar Comida
+                    </button>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Crear Restaurante</button>
+                </div>
+            </form>
+
+            <div id="submission-status" class="hidden">
+                <div class="loading-animation">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Creando restaurante...</p>
+                </div>
+            </div>
+
+            <div id="submission-result" class="hidden">
+                <div class="result-message success hidden">
+                    <i class="fas fa-check-circle"></i>
+                    <p>¡Restaurante creado exitosamente!</p>
+                    <button class="primary-btn" onclick="window.location.href='index.html'">Volver al Inicio</button>
+                </div>
+                <div class="result-message error hidden">
+                    <i class="fas fa-times-circle"></i>
+                    <p>Error al crear el restaurante. Por favor, intente nuevamente.</p>
+                    <button class="secondary-btn" onclick="resetForm()">Intentar Nuevamente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DeliNow - Sistema de Pedidos</p>
+    </footer>
+
+    <script src="js/unified.js"></script>
+</body>
+</html>
